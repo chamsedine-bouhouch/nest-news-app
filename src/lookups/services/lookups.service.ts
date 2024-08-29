@@ -12,7 +12,9 @@ export class LookupsService {
   ) {}
   /** find all */
   async findAll() {
-    return this.lookupRepository.find();
+    return this.lookupRepository.find({
+      relations: ['user'],
+    });
   }
 
   async findOne(id: number) {
@@ -20,7 +22,11 @@ export class LookupsService {
   }
 
   async create(createLookupdto: CreateLookuoDto) {
-    const lookup = this.lookupRepository.create(createLookupdto);
+    console.log('createLookupdto', createLookupdto);
+    const lookup = this.lookupRepository.create({
+      ...createLookupdto,
+      user: { id: createLookupdto.userId },
+    });
 
     console.log('lookup', lookup);
     this.lookupRepository.insert(lookup);

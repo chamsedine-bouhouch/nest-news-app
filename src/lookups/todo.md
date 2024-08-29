@@ -43,14 +43,25 @@
 1. update
 2. delete
 
+## Lesson 3 : Nest TypeOrm
 
+### Durée : 2h
 
-- Git Github
-- Config
+### Membres: Mahmoud & Mariem
+
+- [x] Create New Project - Github Repository
+- [x] Configure OpenApi Swagger
+- [x] Install Config Module
+- [x] QueryBuider Alternative for complex queries
+- [x] Add Entity Relations: OneToMany, ManyToOne
+
+### Funtionalities
+
+1. fetch users with lookups relation
+2. fetch lookups with user relation
+
 <!--
-New Project 
 
-Relations
 Querry Builder
 Query Runner
 Auth guards
@@ -60,4 +71,4 @@ Real time
 Emails
 Notifications
 Microservices
- -->
+-->
